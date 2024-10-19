@@ -5,14 +5,13 @@ const metas = [meta]
 const cadastrar = async () =>{
    
     const meta  = await input({
-        message:"Digite a meta",
-       
+        message:"Digite a meta"            
     })
     if (meta.length == 0 ){
         console.log("A meta não pode ser vazia")
         return
     }
-   metas.push(meta) 
+   metas.push({value:meta, checked:false}) 
 
 }
 
